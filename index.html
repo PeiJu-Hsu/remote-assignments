@@ -29,19 +29,19 @@
             /* border: 1px solid rebeccapurple; */
             padding: 10px 0px;
         }
-        div.nav > div.wrap > div.items, div.nav > div.wrap > div.items div.menuitem  {
+        div.nav > div.wrap > div.items, div.nav > div.wrap > div.items div.menu-item  {
             display: flex;
             
         }
-        div.nav > div.wrap > div.items  div.link, div.nav > div.wrap > div.items div.menubtn {
+        div.nav > div.wrap > div.items  div.link, div.nav > div.wrap > div.items div.menu-btn {
             /* border: 1px solid rebeccapurple; */
             padding: 10px 30px;
             text-align: center;
         }
-        div.nav > div.wrap > div.items div.menubtn {
+        div.nav > div.wrap > div.items div.menu-btn {
             display: none;
         }
-        #menucontrol {
+        #menu-control {
                 display: none;
             }
         
@@ -103,10 +103,10 @@
             div.main {
             width: 95%;
             }
-            div.nav > div.wrap > div.items div.menubtn {
+            div.nav > div.wrap > div.items div.menu-btn {
                 display: inline-block;
             }
-            div.nav > div.wrap > div.items div.menubtn::before {
+            div.nav > div.wrap > div.items div.menu-btn::before {
                 content: '';
                 position: absolute;
                 transform: translateX(-50%);
@@ -119,7 +119,7 @@
             div.nav > div.wrap > div.items {
                 position: relative;
             }
-            div.nav > div.wrap > div.items > div.menuitem {
+            div.nav > div.wrap > div.items > div.menu-item {
                 display: none;
                 flex-direction: column;
                 height: 200px;
@@ -129,7 +129,7 @@
                 top: 38px;
                 border: 1px solid #8899AA;
             }
-            div.nav > div.wrap > div.items > div.menuitem > div.link {
+            div.nav > div.wrap > div.items > div.menu-item > div.link {
                 flex-grow: 1;
                 padding: 15px 30px;
                 border-bottom: 1px dashed #8899AA;
@@ -138,7 +138,7 @@
                 border-bottom: none;
             }
             
-            #menucontrol:checked ~ div.menuitem {
+            #menu-control:checked ~ div.menu-item {
                 display: flex;
             }
         }
@@ -149,10 +149,10 @@
             div.main {
             width: 95%;
             }
-            div.nav > div.wrap > div.items div.menubtn {
+            div.nav > div.wrap > div.items div.menu-btn {
                 display: inline-block;
             }
-            div.nav > div.wrap > div.items div.menubtn::before {
+            div.nav > div.wrap > div.items div.menu-btn::before {
                 content: '';
                 position: absolute;
                 transform: translateX(-50%);
@@ -165,7 +165,7 @@
             div.nav > div.wrap > div.items {
                 position: relative;
             }
-            div.nav > div.wrap > div.items > div.menuitem {
+            div.nav > div.wrap > div.items > div.menu-item {
                 display: none;
                 flex-direction: column;
                 height: 200px;
@@ -175,8 +175,8 @@
                 top: 38px;
                 border: 1px solid #8899AA;
             }
-            div.nav > div.wrap > div.items > div.menuitem > div.link {
-                flex-grow: 1;
+            div.nav > div.wrap > div.items > div.menu-item > div.link {
+                flex-grow: 1;nucontrol
                 padding: 15px 30px;
                 border-bottom: 1px dashed #8899AA;
             }
@@ -184,7 +184,7 @@
                 border-bottom: none;
             }
             
-            #menucontrol:checked ~ div.menuitem {
+            #menu-control:checked ~ div.menu-item {
                 display: flex;
             }
             div.main > div.wrap > div.item {
@@ -208,12 +208,12 @@
                 <p>Website Title / Logo</p>
             </div>
             <div class="items">
-                <label for="menucontrol">
+                <label for="menu-control">
                     
-                    <div class="menubtn"><span></span></div>
+                    <div class="menu-btn"><span></span></div>
                 </label>
-                <input type="checkbox" name="" id="menucontrol">
-                <div class="menuitem">
+                <input type="checkbox" name="" id="menu-control">
+                <div class="menu-item">
                     <div class="link">Item 1</div>
                     <div class="link">Item 2</div>
                     <div class="link">Item 3</div>
