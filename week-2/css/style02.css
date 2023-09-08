@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body > div {
+    width:100%;
+}
+div.nav > div.wrap {
+    width: 95%;
+    margin: auto;
+    display: flex ;
+    justify-content: space-between;
+}
+
+div.nav {
+    background-color: #eeeeee;
+    position: relative;
+}
+
+div.nav > div.wrap > div.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+div.nav > div.wrap > div.items {
+    display: flex;
+    
+    
+}
+div.nav > div.wrap > div.items div.menu-item  {
+    display: none;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+div.nav > div.wrap > div.items div.cross  {
+    display: block;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+div.nav > div.wrap > div.items div.menu-btn::before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 36px;
+    background-color: #000000;
+    box-shadow: 0px 8px 0px #000000, 0px 16px 0px #000000;
+}
+div.nav > div.wrap > div.items  div.link {
+    padding: 20px 30px;
+    text-align: left;
+}
+div.nav > div.wrap > div.items div.menu-btn {
+    padding: 10px 30px;
+    text-align: center;
+}
+/* header section */
+div.header {
+    height: 200px;
+    background-color: #CCDDEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* main section */
+div.main {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+div.main > div.toptitle {
+    margin: 30px auto 20px;
+}   
+div.main > div[class^='wrap'] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.main > div[class^='wrap'] > div.item {
+    width: calc(100% - 10px);
+    background-color: #8899AA;
+    height: 200px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    }
+
+div.main > div.bottom {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+div.main > div.bottom > p {
+    padding: 10px 10px;
+    background-color: #CCDDEE;
+}
+@media only screen and (min-width: 500px) and (max-width: 799.9px) {
+    div.main > div[class^='wrap']> div.item {
+        width: calc(50% - 20px);
+        background-color: #8899AA;
+        height: 200px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 10px;
+        }
+}
+@media only screen and (min-width: 800px) {
+    div.nav > div.wrap > div.items div.menu-btn {
+        display: none;
+    }
+    div.nav > div.wrap > div.items div.menu-item  {
+        display: flex;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        
+    }
+    
+    div.nav > div.wrap > div.items div.cross {
+        display: none;
+    }
+    div.nav > div.wrap > div.items  div.link {
+        padding: 10px 30px;
+        text-align: center;
+    }
+    div.main > div[class^='wrap'] > div.item {
+        width: calc(50% - 20px);
+        background-color: #8899AA;
+        height: 200px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 10px;
+    }
+    
+
+}
