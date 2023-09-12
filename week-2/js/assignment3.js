@@ -1,11 +1,9 @@
 function calculate(data) {
     // your code here
-    var discountvalue = 1-(data.discount); //discount 0.1 等於打九折
-    var saleprice = []; //各product打折後售價
-    var total = 0; //三格product打折後售價加總
+    const discountvalue = 1-(data.discount); //discount 0.1 等於打九折
+    let total = 0; //三格product打折後售價加總
     for (i = 0; i < data.products.length; i++ ){
-        var newPrice = discountvalue * data.products[i].price;
-        saleprice.push(newPrice);
+        let newPrice = discountvalue * data.products[i].price;
         total += newPrice;
     }
     return total;

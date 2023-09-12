@@ -1,9 +1,9 @@
 
 function calculate(args) {
-    var calculator = args.op
-    var num1 = args.n1
-    var num2 = args.n2
-    var ans =''
+    const calculator = args.op
+    const num1 = args.n1
+    const num2 = args.n2
+    let ans =''
     if ((calculator != '+') && (calculator != '-')) {
         ans = 'Not supported';
     } else if (calculator === '+') {
