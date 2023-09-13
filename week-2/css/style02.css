@@ -34,7 +34,7 @@ div.nav > div.wrap > div.items div.menu-item  {
     width: 50vw;
     height: 100vh;
     background-color: white;
-    position:absolute;
+    position:fixed;
     top: 0;
     right: 0;
 }
@@ -108,7 +108,7 @@ div.main > div.bottom {
 }
 div.main > div.bottom > p {
     padding: 10px 10px;
-    background-color: #cc7733;
+    background-color: #CCDDEE;
 }
 @media only screen and (min-width: 500px) and (max-width: 799.9px) {
     div.main > div[class^='wrap']> div.item {
