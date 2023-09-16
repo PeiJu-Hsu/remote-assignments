@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-//Assignment1: Creat a serve
+
+app.set('view engine', 'pug');
+//Assignment1: Creat a serve    
 app.get('/',(req, res) => {
     res.writeHead(200, {
         "constent-type":"text/html",
@@ -12,16 +14,13 @@ app.get('/',(req, res) => {
 //Assgnment2: HTTP GET method   
 app.get('/getData',(req, res) => {
     let num = req.query.number;
-    res.writeHead(200, {
-        "constent-type":"text/html",
-    });
     if (!num) {
-        res.write(`Lake of Parameter`)
+        res.send(`Lake of Parameter`)
     } else if (Number(num) > 0) {
         let result = sum(num);
-        res.write(`1+2+...+${num} = ${result}`);
+        res.send(`${result}`);
     } else {
-        res.write(`Wrong Parameter`);
+        res.send(`Wrong Parameter`);
     }
     res.end()
     });
@@ -39,3 +38,5 @@ function sum(num) {
     }
     return total;
 }
+//Assgnment3: static file
+app.use(express.static('./'))

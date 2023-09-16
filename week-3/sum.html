@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summation page</title>
+</head>
+<body>
+    <h1>Here is Summation page</h1>
+    <p>Show the Answer = 1+2+...+X</p>
+    <p>X value: <input type="text" id="input" name="xvalue" placeholder="a number here"></p>
+    <button type="button" id="calculate">Calculate</button>
+    <p>Result: <strong id="result"></strong></p>
+    
+    <script>
+        const button = document.getElementById('calculate')
+        const inputvalue = document.getElementById('input')
+        const result = document.getElementById('result')
+        button.addEventListener("click", method);
+        function method() {
+            let xvalue = inputvalue.value
+             fetch(`/getData?number=${xvalue}`)
+                .then(response => response.text())
+                .then(data => getResult(data))
+        }
+        function getResult(answer) {
+            result.innerHTML = answer;
+        }
+        function test() {
+            let xvalue = inputvalue.value
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+  		    if (xhr.readyState === 4 && xhr.status === 200) {
+                if (!xvalue) {
+                    result.innerHTML = `Lake of Parameter`
+                } else if (Number(xvalue) > 0) {
+                    let total = sum(xvalue);
+                    result.innerHTML = total;
+                } else {
+                    result.innerHTML =`Wrong Parameter`;
+                }
+  		    }
+            xhr.open('GET','../getData');
+            xhr.send;
+            };
+        }
+    </script>
+</body>
+</html>
