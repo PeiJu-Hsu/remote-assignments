@@ -26,24 +26,7 @@
         function getResult(answer) {
             result.innerHTML = answer;
         }
-        function test() {
-            let xvalue = inputvalue.value
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-  		    if (xhr.readyState === 4 && xhr.status === 200) {
-                if (!xvalue) {
-                    result.innerHTML = `Lake of Parameter`
-                } else if (Number(xvalue) > 0) {
-                    let total = sum(xvalue);
-                    result.innerHTML = total;
-                } else {
                     result.innerHTML =`Wrong Parameter`;
-                }
-  		    }
-            xhr.open('GET','../getData');
-            xhr.send;
-            };
-        }
     </script>
 </body>
 </html>
