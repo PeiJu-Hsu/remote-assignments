@@ -1,0 +1,8 @@
+div.header {
+    height: 200px;
+    background-color: #CCDDEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
