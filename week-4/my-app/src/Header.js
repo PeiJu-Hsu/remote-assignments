@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState} from 'react';
 import './Header.css';
 
+
 const Header= () => {
-    const titleNew = () => {document.getElementById('headerTitle').textContent = 'Have a Good Time!'}
+    const [title, setTitle]=useState('Welcome Message'); 
+    const changeTitle = () => {
+        if (title === 'Welcome Message') {
+            setTitle('Have a Good Day!')
+        } else {
+            setTitle('Welcome Message')
+        }
+        
+    }
     return(
-        <div className="header" onClick={() => titleNew() }>
-            <h1 id="headerTitle">Welcome Message</h1>
+        <div className="header" onClick={changeTitle}>
+            <h1 id="headerTitle">{title}</h1>
         </div>
     )
 }
